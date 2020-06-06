@@ -11,19 +11,24 @@
 	</header>
 
 	<main>
-		<form th:action="@{/resumenProducto}" method="post">
+		<form th:action="@{/resumenProducto}" method="post" th:object="${producto}">
 			<div>
-				<label for="nombre">Nombre</label>
-				<input type="text" name="nombre" id="nombre">
+				<label for="nombre">Nombre</label><br>
+				<input type="text" th:field="*{nombre}" id="nombre">
+				<div class="error" id="nombre" th:if="${#fields.hasErrors('nombre')}"  th:errors="*{nombre}"></div>
+			</div>
+			
+			<div>
+				<label for="descripcion">Descripción</label><br>
+				<input type="text" th:field="*{descripcion}" id="descripcion">			
+				<div class="error" id="nombre" th:if="${#fields.hasErrors('descripcion')}"  th:errors="*{descripcion}">	</div>
 			</div>
 			<div>
-				<label for="descripcion">Descripción</label>
-				<input type="text" name="descripcion" id="descripcion">
+				<label for="precio">Precio</label><br>
+				<input type="text" th:field="*{precio}" id="precio">
+				<div class="error" id="precio" th:if="${#fields.hasErrors('precio')}"  th:errors="*{precio}">	</div>
 			</div>
-			<div>
-				<label for="precio">Precio</label>
-				<input type="text" name="precio" id="precio">
-			</div>
+			
 			<input type="submit" value="Añadir" class="boton"/>
 		</form>
 	</main>

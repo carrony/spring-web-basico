@@ -2,6 +2,11 @@ package com.dred.spring.web.modelo;
 
 import java.io.Serializable;
 
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Positive;
+import javax.validation.constraints.Size;
+
 import org.springframework.stereotype.Component;
 
 @Component
@@ -9,8 +14,12 @@ public class Producto implements Serializable{
 
 	private static final long serialVersionUID = -6064234116982533238L;
 	private int id;
+	@NotEmpty(message="El campo nombre es requerido")
 	private String nombre;
+	@Size(max=30, message="La descripción debe ser menor de 30 carácteres")
 	private String descripcion;
+	@Positive(message="El precio debe ser mayor que 0")
+	@NotNull
 	private double precio;
 	private String rutaImagen;
 	

@@ -1,9 +1,6 @@
 @charset "UTF-8";
-form > div {
-     display:flex;
-     justify-content: space-between;
-     width:40%;
-     margin-bottom: 5px;
+form > div { 
+    margin-bottom: 5px;
  }
  
  form {
@@ -11,8 +8,17 @@ form > div {
  	border-radius: 12px;
  	padding: 25px;
  }
+ form > div >input {
+ 	margin-left:15px;
+ 	margin-top:10px;
+ }
  form > div >label {
- 	width:20%;
+ 	font-weight:600;
+ }
+ 
+ .error {
+ 	margin-left:15px;
+ 	color:red;
  }
  
  .boton {
