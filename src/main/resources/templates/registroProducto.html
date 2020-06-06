@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title th:text="${titulo}"></title>
+<link type="text/css" rel="stylesheet" th:href="@{/css/estilos.css}">
+</head>
+<body>
+	<header>
+		<h1 th:text="${titulo}"></h1>
+	</header>
+
+	<main>
+		<form th:action="@{/resumenProducto}" method="post">
+			<div>
+				<label for="nombre">Nombre</label>
+				<input type="text" name="nombre" id="nombre">
+			</div>
+			<div>
+				<label for="descripcion">Descripción</label>
+				<input type="text" name="descripcion" id="descripcion">
+			</div>
+			<div>
+				<label for="precio">Precio</label>
+				<input type="text" name="precio" id="precio">
+			</div>
+			<input type="submit" value="Añadir" class="boton"/>
+		</form>
+	</main>
+
+	<footer>
+		<h4 th:text="${titulo}"> </h4>
+	</footer>
+</body>
+</html>

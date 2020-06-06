@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title th:text="${titulo}"></title>
+<link type="text/css" rel="stylesheet" th:href="@{/css/estilos.css}">
+</head>
+<body>
+	<header>
+		<h1 th:text="${titulo}"></h1>
+	</header>
+
+	<main>
+		<h2>Artículo Procesado</h2>
+		<p>Tu artículo ha sido procesado correctamente</p>
+		<h2>Los detalles del artículo son:	</h2>
+		<ul class="detalles">
+			<li><p>Nombre:</p> 
+				<p><strong th:text="${producto.nombre}"></strong></p></li>
+			<li><p>Descripción</p>
+				<p><strong th:text="${producto.descripcion}"></strong></p></li>
+			<li><p>Precio</p>
+				<p><strong th:text="${producto.precio}"></strong></p></li>
+		</ul>
+	</main>
+
+	<footer>
+		<h4 th:text="${titulo}"> </h4>
+	</footer>
+</body>
+</html>
