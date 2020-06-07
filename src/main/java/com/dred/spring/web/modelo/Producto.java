@@ -14,11 +14,11 @@ public class Producto implements Serializable{
 
 	private static final long serialVersionUID = -6064234116982533238L;
 	private int id;
-	@NotEmpty(message="El campo nombre es requerido")
+	@NotEmpty
 	private String nombre;
-	@Size(max=30, message="La descripción debe ser menor de 30 carácteres")
+	@Size(max=30)
 	private String descripcion;
-	@Positive(message="El precio debe ser mayor que 0")
+	@Positive
 	@NotNull
 	private double precio;
 	private String rutaImagen;
