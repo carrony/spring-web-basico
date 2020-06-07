@@ -7,7 +7,7 @@
 </head>
 <body>
 	<header>
-		<h1 th:text="${titulo}"></h1>
+		<h1 th:text="#{tituloCabecera}"></h1>
 	</header>
 
 	<main>
@@ -31,10 +31,11 @@
 			
 			<input type="submit" value="Añadir" class="boton"/>
 		</form>
+		<a th:href="@{/}">Volver al Inicio</a>
 	</main>
 
 	<footer>
-		<h4 th:text="${titulo}"> </h4>
+		<h4 th:text="#{tituloCabecera}"> </h4>
 	</footer>
 </body>
 </html>

@@ -133,3 +133,23 @@ form > div {
 				background: aliceblue; padding:10px;}
 	.detalles li {display: flex; justify-content: space-between;}
 	.detalles strong { color:navy; font-size:1.4em;}
+	
+	
+table.tabla-datos {
+	border-collapse: collapse;
+}
+	
+.tabla-datos thead th {
+	vertical-align: bottom;
+	border-bottom: 2px solid #dee2e6;
+}
+
+.tabla-datos td, .tabla-datos th {
+	padding: .75rem;
+	vertical-align: top;
+	border-top: 1px solid #dee2e6;
+}
+
+.tabla-datos tbody tr:nth-of-type(2n+1) {
+	background-color: rgba(0,0,0,.05);
+}

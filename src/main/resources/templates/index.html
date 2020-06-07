@@ -1,11 +1,21 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-<meta charset="UTF-8"/>
-<title th:text="${titulo}"></title>
+<meta charset="UTF-8" />
+<title th:text="#{tituloCabecera}"></title>
+<link type="text/css" rel="stylesheet" th:href="@{/css/estilos.css}">
 </head>
 <body>
+	<header>
+		<h1 th:text="#{tituloCabecera}"></h1>
+	</header>
+	
 	<h1 th:text="${mensaje}"></h1>
-	<a th:href="@{/registrarProducto}">Registrar un producto nuevo</a>
+	<a th:href="@{/registrarProducto}">Registrar un producto nuevo</a><br>
+	<a th:href="@{/mostrar_productos}">Listado de Productos</a>
+	
+	<footer>
+		<h4 th:text="#{tituloCabecera}"> </h4>
+	</footer>
 </body>
 </html>

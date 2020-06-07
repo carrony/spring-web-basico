@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title th:text="#{tituloCabecera}"></title>
+<link type="text/css" rel="stylesheet" th:href="@{/css/estilos.css}">
+</head>
+<body>
+	<header>
+		<h1 th:text="#{tituloCabecera}"></h1>
+	</header>
+	<main>
+		<h2 th:text="${mensaje}"></h2>
+		<table th:if="${!listaProductos.isEmpty()}" class="tabla-datos">
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>Nombre</th>
+					<th>Descripción</th>
+					<th>Precio</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="producto: ${listaProductos}">
+					<td th:text="${producto.id}"></td>
+					<td th:text="${producto.nombre}"></td>
+					<td th:text="${producto.descripcion}"></td>
+					<td th:text="${producto.precio}"></td>
+				</tr>
+			</tbody>
+		</table>
+		
+		<h3 th:if="${listaProductos.isEmpty()}" th:text="#{noHayProductos}"></h3>
+		<br>
+		<a th:href="@{/}">Volver al Inicio</a>
+	</main>
+
+	<footer>
+		<h4 th:text="#{tituloCabecera}"> </h2>
+	</footer>
+</body>
+</html>
