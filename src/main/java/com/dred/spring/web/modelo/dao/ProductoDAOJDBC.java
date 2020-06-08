@@ -40,7 +40,7 @@ public class ProductoDAOJDBC implements ProductoDAO {
 
 	@Override
 	public void eliminarProducto(int id) {
-		jdbcTemplate.update("delete form productos where id=?",id);
+		jdbcTemplate.update("delete from productos where id=?",id);
 	}
 
 	@Override

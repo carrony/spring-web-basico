@@ -21,16 +21,7 @@ form > div {
  	color:red;
  }
  
- .boton {
- 	border: solid 2px #007bff;
- 	border-radius:25px;
- 	width: 80px;
- 	height:30px;
- 	display: block;
- 	background-color:#007bff;
- 	font-weight: 600;
- 	color:white;
- }
+
  header {
      background-color: #73af55;
  }
@@ -153,3 +144,26 @@ table.tabla-datos {
 .tabla-datos tbody tr:nth-of-type(2n+1) {
 	background-color: rgba(0,0,0,.05);
 }
+
+.boton {
+	color: #fff;
+	background-color: #007bff;
+	border-color: #007bff;
+	display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select: none;
+    border: 1px solid transparent;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius:25px;
+    width:80px;
+    height:30px;
+    margin-top:15px;
+}
+
+ .boton_accion {
+	font-size: 1.3em;
+ }

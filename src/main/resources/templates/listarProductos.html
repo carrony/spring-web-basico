@@ -4,6 +4,7 @@
 <meta charset="UTF-8" />
 <title th:text="#{tituloCabecera}"></title>
 <link type="text/css" rel="stylesheet" th:href="@{/css/estilos.css}">
+<script src="https://kit.fontawesome.com/780b91c08b.js" crossorigin="anonymous"></script>
 </head>
 <body>
 	<header>
@@ -18,6 +19,7 @@
 					<th>Nombre</th>
 					<th>Descripción</th>
 					<th>Precio</th>
+					<th>Acciones</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -26,6 +28,8 @@
 					<td th:text="${producto.nombre}"></td>
 					<td th:text="${producto.descripcion}"></td>
 					<td th:text="${producto.precio}"></td>
+					<td><a th:href="@{/editarProducto(id=${producto.id})}" class="boton_accion"><i class="fas fa-edit"></i></a>
+					    <a th:href="@{/eliminarProducto(id=${producto.id})}" class="boton_accion"><i class="fas fa-times"></i></a></td>
 				</tr>
 			</tbody>
 		</table>

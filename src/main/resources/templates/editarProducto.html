@@ -11,7 +11,8 @@
 	</header>
 
 	<main>
-		<form th:action="@{/resumenProducto}" method="post" th:object="${producto}">
+	<h2 th:text="#{editarProducto}"></h2>
+		<form th:action="@{/modificarProducto}" method="post" th:object="${producto}">
 			<div>
 				<label for="nombre">Nombre</label><br>
 				<input type="text" th:field="*{nombre}" id="nombre">
@@ -28,6 +29,7 @@
 				<input type="text" th:field="*{precio}" id="precio">
 				<div class="error" id="precio" th:if="${#fields.hasErrors('precio')}"  th:errors="*{precio}">	</div>
 			</div>
+			<input type="hidden" th:field="*{id}" name="id">
 			<input type="submit" value="Añadir" class="boton"/>
 		</form>
 		<a th:href="@{/}">Volver al Inicio</a>
