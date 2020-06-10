@@ -19,9 +19,7 @@ public class Producto implements Serializable{
 	@Size(max=30)
 	private String descripcion;
 	@Positive
-	@NotNull
 	private double precio;
-	private String rutaImagen;
 	
 	public Producto() {
 	}
@@ -55,12 +53,8 @@ public class Producto implements Serializable{
 	public void setId(int id) {
 		this.id = id;
 	}
-	public String getRutaImagen() {
-		return rutaImagen;
-	}
-	public void setRutaImagen(String rutaImagen) {
-		this.rutaImagen = rutaImagen;
-	}
+
+
 	@Override
 	public String toString() {
 		return "Producto [nombre=" + nombre + ", descripcion=" + descripcion + ", precio=" + precio + "]";
